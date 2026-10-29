@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add a report</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">E-Report</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reports.html">View Reports</a></li>
+                </ul>
+                <div class="d-flex">
+                    <a href="add-report.html" class="btn btn-primary btn-sm px-3 fw-semibold rounded-2 active">+ Add a
+                        Report</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 bg-white">
+                    <div class="text-center mb-4">
+                        <h3 class="fw-bold mb-1">Submit a New Report</h3>
+                        <p class="text-muted small">Fill out the details below to report an issue or facility damage.
+                        </p>
+                    </div>
+                    <form>
+                        <div class="mb-3">
+                            <label for="issueTitle" class="form-label small fw-semibold text-secondary">Issue
+                                Title</label>
+                            <input type="text" class="form-control form-control-sm rounded-2" id="issueTitle"
+                                placeholder="e.g., AC Leaking in Room 302" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="issueCategory"
+                                    class="form-label small fw-semibold text-secondary">Category</label>
+                                <select class="form-select form-select-sm rounded-2" id="issueCategory" required>
+                                    <option value="" selected disabled>Select category</option>
+                                    <option value="facility">Facility Damage</option>
+                                    <option value="maintenance">Maintenance</option>
+                                    <option value="it">IT / Equipment</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="issueLocation"
+                                    class="form-label small fw-semibold text-secondary">Location</label>
+                                <input type="text" class="form-control form-control-sm rounded-2" id="issueLocation"
+                                    placeholder="e.g., Building B, 2nd Floor" required>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="issueDescription"
+                                class="form-label small fw-semibold text-secondary">Description</label>
+                            <textarea class="form-control form-control-sm rounded-2" id="issueDescription" rows="4"
+                                placeholder="Provide a brief explanation of the problem..." required></textarea>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-sm py-2 fw-semibold rounded-2">Submit
+                                Report</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
